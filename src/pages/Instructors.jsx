@@ -23,10 +23,11 @@ const Instructors = () => {
         {instructors?.map((inst) => {
             const {id, name} = inst;
             return (
-                // onClick={() => navigate(`/instructors/${id}`)
+                // onClick={() => navigate(`/instructors/${id}`, { state: inst }) useLocation ile kullanım için
+                
                 <div 
                 className="avatar cursor-pointer " 
-                onClick={() => navigate(`/instructors/${id}`, { state: inst }) } >
+                onClick={() => navigate(`/instructors/${id}`) } >
                     <img src={`https://avatars.dicebear.com/v2/avataaars/${id}.svg`} alt="" />
                     <h6>{name}</h6>
                 </div>
