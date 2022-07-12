@@ -17,9 +17,9 @@ const Instructors = () => {
   }, []);
 
   return (
-    <div className="instructors-main">
-      <h3> Instructors </h3>
-      <div className="instructors-list">
+    <div className="instructors-main ">
+      <h3 className="text-center" > Instructors </h3>
+      <div className="instructors-list grid grid-cols-4 ">
         {instructors?.map((inst) => {
             const {id, name} = inst;
             return (
@@ -29,7 +29,7 @@ const Instructors = () => {
                 className="avatar cursor-pointer " 
                 onClick={() => navigate(`/instructors/${id}`) } >
                     <img src={`https://avatars.dicebear.com/v2/avataaars/${id}.svg`} alt="" />
-                    <h6>{name}</h6>
+                    <h6 className="text-center" >{name}</h6>
                 </div>
             )
         })}
