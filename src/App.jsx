@@ -18,9 +18,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="instructors" element={<Instructors />} />
+          {/* slash kullanmadan koyduklarımız relative path dir */}
           <Route path="instructors/:id" element={<InstructorDetail />} />
           <Route path="contact" element={<ContactForm />} />
-          <Route path="*" element={<NotFound />} />{" "}
+          <Route path="*" element={<NotFound />} />
           {/* "*" bunların dışında anlamına gelir */}
         </Routes>
         <Footer />
